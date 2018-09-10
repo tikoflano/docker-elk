@@ -1,5 +1,5 @@
 # This is the internal user database
-# The hash value is a bcrypt hash and can be generated with plugin/tools/hash.sh
+# The hash value is a bcrypt hash and can be generated with plugin/search-guard-6/tools/hash.sh
 
 #password is: admin
 admin:
@@ -37,3 +37,9 @@ snapshotrestore:
   hash: $2y$12$DpwmetHKwgYnorbgdvORCenv4NAK8cPUg8AI6pxLCuWf/ALc0.v7W
   roles:
     - snapshotrestore
+  
+#password is: curator
+curator:
+  hash: $2y$12$MuOGDGXH06e0q.OK19hybe/9p22plJpNdUsEuOTcJknyBEplyTxuC
+  roles:
+    - curator

@@ -35,5 +35,5 @@ sg_own_index:
     
 sg_curator:
   readonly: true
-  users:
+  backendroles:
     - curator
