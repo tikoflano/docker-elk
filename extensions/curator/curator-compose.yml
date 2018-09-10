@@ -7,15 +7,9 @@ services:
     build:
       context: extensions/curator/
       args:
-       CURATOR_VERSION: ${CURATOR_VERSION}
-       CRON: ${CRON}
-       CONFIG_FILE: ${CONFIG_FILE}
-       COMMAND: ${COMMAND}
+       CURATOR_VERSION: 5.5.4
+       CRON: "0 5 * * *"
     environment:
-      ELASTICSEARCH_HOST: elasticsearch
-      CRON: 0 5 * * *
-      CONFIG_FILE: /usr/share/curator/config/curator.yml
-      COMMAND: /usr/share/curator/config/delete_log_files_curator.yml
       UNIT_COUNT: 90
     networks:
       - elk
