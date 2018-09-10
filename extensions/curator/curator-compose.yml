@@ -2,8 +2,8 @@ version: '2'
 
 services:
 
-
   curator:
+    container_name: curator
     build:
       context: extensions/curator/
     environment:
