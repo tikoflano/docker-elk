@@ -6,6 +6,11 @@ services:
     container_name: curator
     build:
       context: extensions/curator/
+      args:
+       CURATOR_VERSION: ${CURATOR_VERSION}
+       CRON: ${CRON}
+       CONFIG_FILE: ${CONFIG_FILE}
+       COMMAND: ${COMMAND}
     environment:
       ELASTICSEARCH_HOST: elasticsearch
       CRON: 0 5 * * *
