@@ -117,7 +117,9 @@ sg_curator:
   - "CLUSTER_MONITOR"
   - "CLUSTER_COMPOSITE_OPS"
   indices:
+    '*':
+      '*':
+      - INDICES_MONITOR
     logstash-*:
       '*':
       - DELETE
-      - INDICES_MONITOR
