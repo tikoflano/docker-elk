@@ -110,3 +110,14 @@ sg_own_index:
     '${user_name}':
       '*':
         - INDICES_ALL
+    
+# For curator        
+sg_curator:
+  cluster:
+  - "CLUSTER_MONITOR"
+  - "CLUSTER_COMPOSITE_OPS"
+  indices:
+    logstash-*:
+      '*':
+      - "DELETE"
+      - INDICES_MONITOR
