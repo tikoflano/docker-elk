@@ -19,6 +19,4 @@ client:
   master_only: False
 
 logging:
-  loglevel: DEBUG
-  logfile:  /usr/share/curator/curator.log
-  logformat: default
+  loglevel: INFO
