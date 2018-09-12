@@ -62,4 +62,6 @@ networks:
     
 volumes:
   elasticsearch-data:
+    name: elasticsearch-data
   logstash-sincedb:
+    name: logstash-sincedb
