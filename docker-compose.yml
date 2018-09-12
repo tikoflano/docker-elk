@@ -19,6 +19,8 @@ services:
     networks:
       - elk
     restart: unless-stopped
+    environment:
+      - TZ=$TIMEZONE
 
   logstash:
     container_name: logstash
@@ -41,6 +43,8 @@ services:
     depends_on:
       - elasticsearch
     restart: unless-stopped
+    environment:
+      - TZ=$TIMEZONE
 
   kibana:
     container_name: kibana
@@ -57,6 +61,8 @@ services:
     depends_on:
       - elasticsearch
     restart: unless-stopped
+    environment:
+      - TZ=$TIMEZONE
 
 networks:
 
