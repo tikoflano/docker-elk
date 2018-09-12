@@ -1,10 +1,9 @@
 # This is the internal user database
 # The hash value is a bcrypt hash and can be generated with plugin/search-guard-6/tools/hash.sh
 
-#password is: admin
-admin:
+desarrollo:
   readonly: true
-  hash: $2a$12$VcCDgh2NDk07JGN0rjGbM.Ad41qVR/YFJcgHp0UGns5JDymv..TOG
+  hash: $2y$12$nojbqDUdhaz8ORBlVhgr5OhedDkXbZj5l5/4iTfKlcBo8Q/u6Rw.q
   roles:
     - admin
 
