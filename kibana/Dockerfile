@@ -12,4 +12,4 @@ RUN kibana-plugin install https://repo1.maven.org/maven2/com/floragunn/search-gu
 
 # Add your kibana plugins setup here
 # Example: RUN kibana-plugin install <name|url>
-RUN kibana-plugin install https://github.com/sirensolutions/sentinl/releases/download/tag-6.2.2/sentinl-v6.2.2.zip
+RUN kibana-plugin install https://github.com/sirensolutions/sentinl/releases/download/tag-${ELK_VERSION}/sentinl-v${ELK_VERSION}.zip
