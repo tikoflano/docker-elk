@@ -74,6 +74,18 @@ sg_kibana_server:
     '?monitoring*':
       '*':
         - INDICES_ALL
+    'watcher*':
+      '*':
+        - indices:data/read/search
+        - MANAGE
+        - CREATE_INDEX
+        - INDEX
+        - READ
+        - WRITE
+        - DELETE
+    '*':
+      '*':
+        - indices:data/read/search
 
 # For logstash and beats
 sg_logstash:
