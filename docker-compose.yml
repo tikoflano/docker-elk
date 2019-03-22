@@ -55,6 +55,7 @@ services:
       args:
         ELK_VERSION: $ELK_VERSION
         SG_VERSION_KIBANA: $SG_VERSION_KIBANA
+        SENTINL_GIT_TAG: $SENTINL_GIT_TAG
     volumes:
       - ./kibana/config/:/usr/share/kibana/config:ro
     ports:
