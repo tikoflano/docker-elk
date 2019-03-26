@@ -3,6 +3,8 @@ ARG ELK_VERSION
 # https://github.com/elastic/kibana-docker
 FROM docker.elastic.co/kibana/kibana-oss:${ELK_VERSION}
 
+ENV NODE_OPTIONS="--max-old-space-size=5000"
+
 # Search Guard plugin
 ARG ELK_VERSION
 ARG SG_VERSION_KIBANA
