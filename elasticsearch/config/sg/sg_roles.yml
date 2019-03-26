@@ -111,9 +111,6 @@ sg_kibana_server:
         - READ
         - WRITE
         - DELETE
-    '*':
-      '*':
-        - indices:data/read/search
 
 # For logstash and beats
 sg_logstash:
