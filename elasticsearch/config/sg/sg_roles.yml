@@ -210,3 +210,5 @@ sg_curator:
     logstash-*:
       '*':
       - DELETE
+      - INDICES_MONITOR
+      - indices:admin/delete*
