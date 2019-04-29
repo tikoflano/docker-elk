@@ -10,12 +10,9 @@ services:
        CURATOR_VERSION: 5.5.4
        CRON: "0 5 * * *"
     environment:
-      ELASTICSEARCH_HOST: elasticsearch
-      UNIT_COUNT: 90
+      TZ: $TIMEZONE
     networks:
       - elk
     depends_on:
       - elasticsearch
     restart: unless-stopped
-    environment:
-      - TZ=$TIMEZONE
