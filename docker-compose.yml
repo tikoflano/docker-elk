@@ -8,6 +8,7 @@ services:
       context: elasticsearch/
       args:
         ELK_VERSION: $ELK_VERSION
+        ELK_FLAVOUR: $ELK_FLAVOUR
         SG_VERSION: $SG_VERSION
     volumes:
       - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
@@ -29,10 +30,10 @@ services:
       context: logstash/
       args:
         ELK_VERSION: $ELK_VERSION
+        ELK_FLAVOUR: $ELK_FLAVOUR
     volumes:
       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
       - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
-      - ./logstash/patterns:/usr/share/logstash/patterns:ro
       - logstash-sincedb:/usr/share/logstash/data/plugins/inputs/file
       - /home/linkify/public_html/linkify/var/logs/:/usr/share/logstash/logs/app.linkify:ro
     ports:
@@ -54,6 +55,7 @@ services:
       context: kibana/
       args:
         ELK_VERSION: $ELK_VERSION
+        ELK_FLAVOUR: $ELK_FLAVOUR
         SG_VERSION_KIBANA: $SG_VERSION_KIBANA
         SENTINL_GIT_TAG: $SENTINL_GIT_TAG
     volumes:

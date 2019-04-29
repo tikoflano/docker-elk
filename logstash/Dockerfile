@@ -1,7 +1,8 @@
 ARG ELK_VERSION
+ARG ELK_FLAVOUR
 
 # https://github.com/elastic/logstash-docker
-FROM docker.elastic.co/logstash/logstash-oss:${ELK_VERSION}
+FROM docker.elastic.co/logstash/logstash${ELK_FLAVOUR}:${ELK_VERSION}
 
 RUN mkdir -p /usr/share/logstash/data/plugins/inputs/file
 RUN chown -R logstash:logstash /usr/share/logstash/data/plugins
