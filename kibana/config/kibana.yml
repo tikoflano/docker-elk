@@ -5,7 +5,7 @@
 server.name: kibana
 server.host: "0"
 elasticsearch.url: http://elasticsearch:9200
-server.basePath: "/kibana"
+#server.basePath: "/kibana"
 
 ## Custom configuration
 #
@@ -13,3 +13,6 @@ elasticsearch.username: "kibanaserver"
 elasticsearch.password: "kibanaserver"
 
 searchguard.cookie.password: "123567818187654rwrwfsfshdhdhtegdhfzftdhncn"
+
+## Keep sessions for 24 hours
+searchguard.session.ttl: 86400000
